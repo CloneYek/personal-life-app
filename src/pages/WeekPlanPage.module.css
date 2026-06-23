@@ -1,0 +1,308 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+/* 顶部标题 */
+.header {
+  padding: 12px var(--spacing-page) 0;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.weekRange {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* ========== 仪表盘卡片 ========== */
+.dashboardCard {
+  margin: 20px var(--spacing-page) 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ringContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ringCenter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.ringPercent {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.ringLabel {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.statDivider {
+  width: 1px;
+  height: 32px;
+  background: var(--color-divider);
+}
+
+/* ========== 区块通用 ========== */
+.section {
+  padding: 0 var(--spacing-page);
+  margin-top: 24px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 14px;
+}
+
+/* ========== 每日分布 ========== */
+.dailyBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 16px 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.dailyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: transform 150ms ease;
+}
+
+.dailyItem:active {
+  transform: scale(0.95);
+}
+
+.dailyLabel {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.dailySelected .dailyLabel {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.dailyProgress {
+  width: 24px;
+  height: 48px;
+  border-radius: 6px;
+  background: var(--color-surface-muted);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.dailyFill {
+  width: 100%;
+  border-radius: 6px;
+  transition: height 400ms ease;
+  min-height: 0;
+}
+
+.dailyCount {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.dailySelected .dailyCount {
+  color: var(--color-primary);
+}
+
+/* ========== 分类分布 ========== */
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.categoryRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.categoryDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.categoryName {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.categoryCount {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.categoryBar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-surface-muted);
+  overflow: hidden;
+}
+
+.categoryFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 500ms ease;
+}
+
+/* ========== 任务列表 ========== */
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow-card);
+  animation: slideUp 250ms ease backwards;
+  transition: opacity 200ms ease;
+}
+
+.taskDone {
+  opacity: 0.55;
+}
+
+.taskCheck {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.taskDone .taskCheck {
+  border-color: var(--color-success);
+  background: var(--color-success);
+}
+
+.taskTitle {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.taskDone .taskTitle {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.taskCat {
+  flex-shrink: 0;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}

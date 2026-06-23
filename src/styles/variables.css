@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  /* 色彩系统 */
+  --color-bg: #FFFBEB;
+  --color-surface: #FFFFFF;
+  --color-surface-warm: #FFFDF7;
+  --color-surface-muted: #F5F3F0;
+  --color-primary: #D97706;
+  --color-primary-light: #FEF3C7;
+  --color-primary-dim: #FDE68A;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #78716C;
+  --color-text-muted: #9CA3AF;
+  --color-text-answer: #475569;
+  --color-border: rgba(120, 113, 108, 0.25);
+  --color-divider: #F1F5F9;
+  --color-nav-border: rgba(237, 232, 225, 1);
+  --color-danger: #EF4444;
+  --color-success: #22C55E;
+
+  /* 圆角 */
+  --radius-card: 16px;
+  --radius-card-sm: 14px;
+  --radius-chip: 20px;
+  --radius-button: 20px;
+  --radius-search: 14px;
+
+  /* 阴影 */
+  --shadow-card: 0 2px 8px rgba(120, 113, 108, 0.08);
+  --shadow-nav: 0 -2px 12px rgba(0, 0, 0, 0.06);
+
+  /* 间距 */
+  --spacing-page: 20px;
+  --spacing-card: 16px;
+  --spacing-gap-sm: 12px;
+  --spacing-gap-md: 20px;
+  --spacing-gap-lg: 28px;
+
+  /* 字体 */
+  --font-heading: 'Fredoka', system-ui, -apple-system, sans-serif;
+  --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+
+  /* 导航 */
+  --nav-height: 82px;
+  --status-bar-height: 62px;
+
+  /* Safe Area */
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+}

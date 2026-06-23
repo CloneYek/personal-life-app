@@ -1,0 +1,225 @@
+.page {
+  min-height: 100vh;
+}
+
+/* 顶部导航 */
+.topNav {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-page);
+  height: 44px;
+  position: relative;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  margin-left: -8px;
+  transition: background 150ms ease;
+}
+
+.backBtn:active {
+  background: var(--color-surface-muted);
+}
+
+.backArrow {
+  font-size: 22px;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.navTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* 区块 */
+.section {
+  padding: 16px var(--spacing-page) 0;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+/* 分类选择 */
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.categoryChip {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--radius-chip);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  transition: all 150ms ease;
+}
+
+.categoryChip:active {
+  transform: scale(0.96);
+}
+
+.categoryActive {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* 文本输入 */
+.textInput {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  outline: none;
+  box-shadow: var(--shadow-card);
+  transition: border 150ms ease;
+}
+
+.textInput:focus {
+  border-color: var(--color-primary);
+}
+
+.textInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* 详细要点 */
+.detailList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulletDot {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailInput {
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card-sm);
+  outline: none;
+  box-shadow: var(--shadow-card);
+  transition: border 150ms ease;
+}
+
+.detailInput:focus {
+  border-color: var(--color-primary);
+}
+
+.detailInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.removeBtn {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease;
+}
+
+.removeBtn:active {
+  background: var(--color-surface-muted);
+}
+
+/* 添加要点按钮 */
+.addDetailBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: var(--radius-chip);
+  background: var(--color-primary-light);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: opacity 150ms ease;
+}
+
+.addDetailBtn:active {
+  opacity: 0.7;
+}
+
+/* 保存按钮 */
+.saveSection {
+  padding: 28px var(--spacing-page) 0;
+}
+
+.saveBtn {
+  width: 100%;
+  height: 52px;
+  border-radius: var(--radius-button);
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 200ms ease, transform 100ms ease;
+}
+
+.saveBtn:active {
+  transform: scale(0.97);
+}
+
+.saveBtnDisabled {
+  opacity: 0.4;
+}

@@ -1,0 +1,583 @@
+.page {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+/* 问候区 */
+.greetingSection {
+  padding: 12px var(--spacing-page) 0;
+}
+
+.greeting {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.date {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* 快速记录入口 */
+.pillBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: calc(100% - var(--spacing-page) * 2);
+  height: 48px;
+  margin: 20px var(--spacing-page) 0;
+  padding: 0 16px;
+  border-radius: 24px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: transform 100ms ease;
+  border: none;
+  cursor: pointer;
+}
+
+.pillBar:active {
+  transform: scale(0.97);
+}
+
+.pillPlaceholder {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* 区块通用 */
+.section {
+  padding: 0 var(--spacing-page);
+  margin-top: var(--spacing-gap-lg);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== 新增/编辑表单 ========== */
+.formCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid rgba(213, 119, 6, 0.2);
+  margin-bottom: 12px;
+  animation: slideDown 200ms ease backwards;
+}
+
+.formInput {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: #FFFFFF;
+  outline: none;
+  transition: border-color 150ms ease;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.formInput:focus {
+  border-color: var(--color-primary);
+}
+
+.formInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.categoryRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.catChip {
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 13px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease;
+  display: flex;
+  align-items: center;
+}
+
+.catChip:active {
+  transform: scale(0.94);
+}
+
+.catChipActive {
+  border-color: transparent;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelBtn {
+  height: 34px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.cancelBtn:active {
+  background: var(--color-surface-muted);
+}
+
+.saveBtn {
+  height: 34px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--color-primary);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: opacity 150ms ease;
+  display: flex;
+  align-items: center;
+}
+
+.saveBtnDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.saveBtn:not(.saveBtnDisabled):active {
+  opacity: 0.85;
+}
+
+/* ========== 待办列表 ========== */
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todoCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  animation: slideUp 250ms ease backwards;
+  padding: 0 16px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 200ms ease;
+  flex-wrap: wrap;
+}
+
+.todoCompleted {
+  opacity: 0.65;
+}
+
+.checkboxWrap {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.todoContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 56px;
+}
+
+.todoText {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  transition: color 200ms ease;
+}
+
+.todoDone {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.catTag {
+  flex-shrink: 0;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* 操作行 */
+.actionRow {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 0 10px;
+  border-top: 1px solid var(--color-divider);
+  animation: fadeIn 150ms ease backwards;
+}
+
+.editBtn,
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.editBtn {
+  background: rgba(59, 130, 246, 0.08);
+  color: #3B82F6;
+}
+.editBtn:active {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.deleteBtn {
+  background: rgba(239, 68, 68, 0.08);
+  color: var(--color-danger);
+}
+.deleteBtn:active {
+  background: rgba(239, 68, 68, 0.18);
+}
+
+/* 笔记 — 水平滚动 */
+.noteCount {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noteScrollContainer {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 2px 0 8px;
+  /* 隐藏滚动条 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.noteScrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.noteCardH {
+  position: relative;
+  flex-shrink: 0;
+  width: 220px;
+  min-height: 120px;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-card);
+  scroll-snap-align: start;
+  animation: slideUp 250ms ease backwards;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.noteCardH:active {
+  transform: scale(0.98);
+}
+
+/* 删除按钮 */
+.noteDeleteBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 150ms ease;
+  z-index: 2;
+}
+
+.noteDeleteBtn:active {
+  background: rgba(239, 68, 68, 0.12);
+}
+
+/* 删除确认遮罩 */
+.noteDeleteOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 251, 235, 0.96);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 3;
+  animation: fadeIn 150ms ease;
+}
+
+.deleteConfirmText {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.deleteConfirmActions {
+  display: flex;
+  gap: 10px;
+}
+
+.deleteCancelBtn,
+.deleteConfirmBtn {
+  height: 30px;
+  padding: 0 14px;
+  border-radius: 15px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 150ms ease;
+}
+
+.deleteCancelBtn {
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+}
+
+.deleteConfirmBtn {
+  background: var(--color-danger);
+  color: #FFFFFF;
+}
+
+.deleteCancelBtn:active,
+.deleteConfirmBtn:active {
+  opacity: 0.8;
+}
+
+/* 笔记内容 */
+.noteContentH {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 20px;
+}
+
+.noteTitleH {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notePreviewH {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.noteFooterH {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.noteTimeH {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.noteTagH {
+  height: 18px;
+  padding: 0 8px;
+  border-radius: 9px;
+  background: rgba(217, 119, 6, 0.1);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+/* 加载更多占位卡片 */
+.noteLoadingCard {
+  flex-shrink: 0;
+  width: 48px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-card);
+  background: transparent;
+  border: 1.5px dashed var(--color-border);
+}
+
+.loadingDots {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 2px;
+}
+
+/* 进度环卡片 */
+.progressCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.progressInfo {
+  flex: 1;
+}
+
+.progressLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.progressDesc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* FAB */
+.fab {
+  position: fixed;
+  bottom: 104px;
+  right: calc(50% - 195px + 24px);
+  width: 52px;
+  height: 52px;
+  border-radius: 26px;
+  background: var(--color-primary);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  z-index: 40;
+}
+
+.fab:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.25);
+}
+
+/* 动画 */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+textarea {
+  resize: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 移动端视口模拟 - 桌面上居中显示 390px 宽度 */
+@media (min-width: 391px) {
+  body {
+    background: #e8e6e0;
+  }
+
+  #root {
+    max-width: 390px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: var(--color-bg);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+/* 隐藏滚动条但保持滚动功能 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* 文字截断工具类 */
+.text-clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

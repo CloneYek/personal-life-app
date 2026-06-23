@@ -1,0 +1,132 @@
+.page {
+  min-height: 100vh;
+}
+
+/* 顶部导航 */
+.topNav {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-page);
+  height: 44px;
+  position: relative;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  margin-left: -8px;
+  transition: background 150ms ease;
+}
+
+.backBtn:active {
+  background: var(--color-surface-muted);
+}
+
+.backArrow {
+  font-size: 22px;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.navTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* 时间戳 */
+.timestamp {
+  padding: 8px var(--spacing-page) 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+/* 标题输入 */
+.titleInput {
+  width: calc(100% - var(--spacing-page) * 2);
+  margin: 12px var(--spacing-page) 0;
+  padding: 0;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.titleInput::placeholder {
+  color: #D4D0C8;
+}
+
+/* 内容输入卡片 */
+.contentCard {
+  margin: 16px var(--spacing-page) 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.contentInput {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  border: none;
+  outline: none;
+  background: transparent;
+  line-height: 1.6;
+  min-height: 120px;
+}
+
+.contentInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* 标签区域 */
+.tagSection {
+  padding: 16px var(--spacing-page) 0;
+}
+
+.tagList {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 保存按钮 */
+.saveSection {
+  padding: 24px var(--spacing-page) 0;
+}
+
+.saveBtn {
+  width: 100%;
+  height: 52px;
+  border-radius: var(--radius-button);
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 200ms ease, transform 100ms ease;
+}
+
+.saveBtn:active {
+  transform: scale(0.97);
+}
+
+.saveBtnDisabled {
+  opacity: 0.4;
+}
