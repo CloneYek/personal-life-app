@@ -39,6 +39,14 @@ lerna-debug.log*
 # TypeScript cache
 *.tsbuildinfo
 
+# PWA dev artifacts
+dev-dist/
+.npm-cache/
+
+# Vite generated config artifacts
+vite.config.d.ts
+vite.config.js
+
 # Misc
 .cache/
 .temp/
